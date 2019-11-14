@@ -2,15 +2,68 @@ html, body {
     margin: 0;
 }
 
+body {
+    min-width: 900px;
+}
+
 h1 {
+    text-align: center;
+    margin: 10px 0px;
+}
+
+#add_book_container {
     text-align: center;
 }
 
-#main-container {
+#main_container {
     margin: 8px;
 }
 
+#books_container {
+    margin-top: 10px;
+}
+
 .container {
+    position: relative;
     border: 3px solid black;
     padding: 10px 0px;
+    margin: 20px;
+    background: ghostwhite;
+}
+
+span {
+    position: absolute;
+    right: 10px;
+}
+
+#form_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    display: none;
+    border: 3px solid black;
+    padding: 15px;
+    background: ghostwhite;
+}
+
+.form_element {
+    margin: 3px 0px;
+}
+
+form {
+    max-width: 600px;
+}
+
+label {
+    width: 200px;
+    display: inline-block;
+    text-align: right
+}
+
+.butts {
+    text-align: center;
+    padding-top: 10px;
 }

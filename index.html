@@ -1,14 +1,44 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <link rel="stylesheet" href="style.css">
     <script defer src="library.js"></script>
     <title>Library Project</title>
 </head>
+
 <body>
     <h1>My Library</h1>
-    <div id="main-container">
+    <div id="add_book_container"><button id="add_book" type="button">Add Book</button></div>
+    <div id="main_container">
+        <div id="form_container">
+            <form id="book_form">
+                <div class="form_element">
+                    <label for="book_title">Book Title:</label>
+                    <input type="text" name="book_title">
+                </div>
+                <div class="form_element">
+                    <label for="book_author">Book Author:</label>
+                    <input type="text" name="book_author">
+                </div>
+                <div class="form_element">
+                    <label for="book_pages">Pages:</label>
+                    <input type="text" name="book_pages">
+                </div>
+                <div class="form_element">
+                    <label for="book_read">Have You Read The Title?:</label>
+                    No:<input type="radio" name="book_read" value="false">
+                    Yes:<input type="radio" name="book_read" value="true">
+                </div>
+                <div class="form_element butts">
+                    <input id="submit_button" type="submit" value="Submit"> <input type="reset" value="Reset">
+                </div>
+            </form>
+        </div>
+        <div id="books_container">
 
+        </div>
     </div>
 </body>
+
 </html>

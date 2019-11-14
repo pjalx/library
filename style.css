@@ -1,3 +1,16 @@
-html {
+html, body {
     margin: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+#main-container {
+    margin: 8px;
+}
+
+.container {
+    border: 3px solid black;
+    padding: 10px 0px;
 }

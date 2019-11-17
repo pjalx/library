@@ -15,25 +15,57 @@ h1 {
     text-align: center;
 }
 
+#add_book {
+    background: black;
+    color: ghostwhite;
+    border: none;
+    outline: black;
+    text-align: center;
+    padding: 15px 45px;
+    font-size: 1em;
+}
+
 #main_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 8px;
 }
 
 #books_container {
-    margin-top: 10px;
+    width: 98%;
+    margin: 10px 0px;
 }
 
 .container {
     position: relative;
-    border: 3px solid black;
-    padding: 10px 0px;
-    margin: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px 0px;
+    margin: 10px 5px 20px 5px;
     background: ghostwhite;
 }
 
-span {
+.book_info_long {
+    width: 250px;
+    word-break: break-word;
+}
+
+.book_info_short {
+    width:100px;
+    word-break: break-word;
+}
+
+.delete_button {
     position: absolute;
     right: 10px;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.delete_button:hover, .book_read {
+    cursor: pointer;
 }
 
 #form_container {
@@ -53,10 +85,6 @@ form {
     margin: 3px 0px;
 }
 
-form {
-    max-width: 600px;
-}
-
 label {
     width: 200px;
     display: inline-block;
@@ -65,5 +93,8 @@ label {
 
 .butts {
     text-align: center;
-    padding-top: 10px;
+    padding: 10px 0px 0px 10px;
+}
+.butts input {
+    margin-left: 10px;
 }

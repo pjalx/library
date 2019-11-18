@@ -18,15 +18,35 @@ function showForm(e) {
 
 const createBookDivs = function(e) {
     const CONTAINER = document.getElementById('books_container');
+    document.querySelectorAll('.book_read').forEach(function(tog) {
+        return tog.removeEventListener('click', toggleRead, false);
+    });
     CONTAINER.innerHTML = '';    
     myLibrary.forEach(function(item, index) {
         const BDIV = document.createElement('DIV');
         BDIV.className = 'container'
         BDIV.setAttribute('data-array_position', index);
         BDIV.innerHTML =  `<span class="book_info_long"><b>Title:</b> ${item.title}</span>  <span class="book_info_long"><b>Author:</b> ${item.author}</span>  <span class="book_info_short"><b>Pages:</b> ${item.pages}</span>  <span class="book_info_short"><b class="book_read">Read:</b> ${item.read}</span>`;
-        CONTAINER.append(BDIV);
         BDIV.insertAdjacentHTML('beforeend', '<span class = "delete_button">&timesb;</span>');
+        CONTAINER.append(BDIV);
+
+        document.querySelectorAll('.book_read').forEach(function(tog) {
+            return tog.addEventListener('click', toggleRead, false);
+        });
     });
+    
+    function toggleRead(e) {
+        if (myLibrary[e.target.parentElement.parentElement.dataset.array_position].read == 'true') {
+            e.target.nextSibling.textContent = ` false`;
+            myLibrary[e.target.parentElement.parentElement.dataset.array_position].read = 'false';
+        }else {
+            e.target.nextSibling.textContent = ` true`;
+            myLibrary[e.target.parentElement.parentElement.dataset.array_position].read = 'true';
+        }
+        //console.log(e.target.parentElement.parentElement.dataset.array_position);
+        //myLibrary[document.querySelector('.book_read').parentElement.parentElement.dataset.array_position].read
+    }
+
     deleteBook();
 }
 
@@ -38,8 +58,6 @@ function deleteBook() {
         createBookDivs();
     })});
 }
-
-function toggleRead() {}
 
 function submitForm(e) {
     e.preventDefault();

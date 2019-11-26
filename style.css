@@ -23,6 +23,7 @@ h1 {
     text-align: center;
     padding: 15px 45px;
     font-size: 1em;
+    cursor: pointer;
 }
 
 #main_container {
@@ -64,7 +65,7 @@ h1 {
     font-size: larger;
 }
 
-.delete_button:hover, .book_read {
+.ops_button:hover {
     cursor: pointer;
 }
 
@@ -97,4 +98,12 @@ label {
 }
 .butts input {
     margin-left: 10px;
+}
+
+.True {
+    background: yellow;
+}
+
+.False {
+    background: lightpink;
 }

@@ -15,20 +15,20 @@
             <form id="book_form">
                 <div class="form_element">
                     <label for="book_title">Book Title:</label>
-                    <input type="text" name="book_title">
+                    <input type="text" name="book_title" required>
                 </div>
                 <div class="form_element">
                     <label for="book_author">Book Author:</label>
-                    <input type="text" name="book_author">
+                    <input type="text" name="book_author" required>
                 </div>
                 <div class="form_element">
                     <label for="book_pages">Pages:</label>
-                    <input type="text" name="book_pages">
+                    <input type="number" min="1" max="5000000" name="book_pages" required>
                 </div>
                 <div class="form_element">
                     <label for="book_read">Have You Read The Title?:</label>
-                    No:<input type="radio" name="book_read" value="false">
-                    Yes:<input type="radio" name="book_read" value="true" checked>
+                    No:<input type="radio" name="book_read" value="False">
+                    Yes:<input type="radio" name="book_read" value="True" checked>
                 </div>
                 <div class="form_element butts">
                     <input id="submit_button" type="submit" value="Submit"> <input type="reset" value="Reset"> <input id="cancel_button" type="button" value="Cancel">
